@@ -40,7 +40,35 @@
 	`wget https://raw.githubusercontent.com/fastai/courses/master/setup/setup_p2_ireland.sh` 	
 	* `chmod 775 setup_p2_ireland.sh`
 	
-8. Run setup
+8. **Run setup**
 	* `./setup_p2_ireland.sh`
+	* Copy output in credentials
+	* Copy connection command
+	
+9. **Connect to server**
+	* `ssh -i /Users/[localUser]/.ssh/aws-key.pem ubuntu@[instanceUrl]`
+	* When prompted type 'yes'
+
+10. **Update packages & reboot**
+	* Undo bug with history: `sudo rm .bash_history`
+	* `sudo apt-get update`
+	* `sudo apt-get upgrade`
+	* `sudo reboot now`
+	
+11. **Check setup**
+	* After reboot, login again and check nvidia drivers: `nvidia-smi`
+	* Trouble shoot <http://wiki.fast.ai/index.php/AWS_install> 
+	
+12. **Start notebook**
+	* `jupyter notebook`
+	* Goto url: <http://[instanceUrl]:8888>
+	* Default pass 'dl_course'
+
+13. **Check notebooks**
+	* Create new notebook in 'nbs' folder usding Python [conda root]
+	* check basic command (like `1+1`)
+	* check imports `import theano` & `import keras`
+	
+
 	 	
 

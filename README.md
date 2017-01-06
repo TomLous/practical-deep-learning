@@ -69,6 +69,12 @@
 	* check basic command (like `1+1`)
 	* check imports `import theano` & `import keras`
 	
+14. **Shortcuts**
+	* Download aliases 
+	`wget https://raw.githubusercontent.com/fastai/courses/master/setup/aws-alias.sh`
+	* `source aws-alias.sh`
+	*
+	
 
 	 	
 

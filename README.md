@@ -37,11 +37,11 @@
 	* Check the git repo <https://github.com/fastai/courses/tree/master/setup>
 	* Download setup file: 
 	
-	`wget https://raw.githubusercontent.com/fastai/courses/master/setup/setup_p2_ireland.sh` 	
-	* `chmod 775 setup_p2_ireland.sh`
+	`wget https://raw.githubusercontent.com/fastai/courses/master/setup/setup_p2.sh` 	
+	* `chmod 775 setup_p2.sh`
 	
 8. **Run setup**
-	* `./setup_p2_ireland.sh`
+	* `./setup_p2.sh`
 	* Copy output in credentials
 	* Copy connection command
 	
@@ -73,8 +73,32 @@
 	* Download aliases 
 	`wget https://raw.githubusercontent.com/fastai/courses/master/setup/aws-alias.sh`
 	* `source aws-alias.sh`
-	*
+
+15. **Setup notebooks**
+	* Fork the gitrepo <https://github.com/fastai/courses>
 	
+	*Perhaps rename it to something sensible, like **fastai-courses**?*
+	
+	* SSH to machine (`aws-ssh`)
+	* `cd ~` if you are not already there
+	* Clone your repo `git clone https://github.com/[repoUrl]`
+	* Make a link to notebooks `ln -s ~/[repoName]/deeplearning1/nbs/ nbs/deeplearning1`
+	* Run jupyter in background `jupyter notebook &> /dev/null &`
+	* Make data dir `mkdir ~/nbs/data` and change to it `cd ~/nbs/data`
+	* Download dogs&cats `wget http://www.platform.ai/data/dogscats.zip`
+	* Install unzip `sudo apt-get install unzip`
+	* Unzip the data `unzip -q dogscats.zip`
+	* Go to your notebook <http://[instanceUrl]:8888/notebooks/deeplearning1/lesson1.ipynb>
+	* Step through the process of lesson1.ipynb
+	 
+16. **Kaggle CLI**
+	* Create profile at <https://www.kaggle.com/>
+	* On server: `pip install kaggle-cli`
+	* `kg config -g -u [username] -p [password] -c dogs-vs-cats-redux-kernels-edition`
+	* `mkdir ~/nbs/data/dogscats.2` and cd to it
+	* `kg download`
+	
+
 
 	 	
 

@@ -96,7 +96,8 @@
 	* On server: `pip install kaggle-cli`
 	* `kg config -g -u [username] -p [password] -c dogs-vs-cats-redux-kernels-edition`
 	* `mkdir ~/nbs/data/dogscats.2` and cd to it
-	* `kg download`
+	* Go to <https://www.kaggle.com/c/dogs-vs-cats-redux-kernels-edition> and accept competition requirements (by downloading the data)
+	* On server: `kg download`
 	
 
 

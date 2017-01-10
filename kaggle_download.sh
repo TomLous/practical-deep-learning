@@ -1,7 +1,17 @@
 #!/bin/bash
-CV_FACTOR=${1:-0.08}
-SAMPLE_SIZE=${2:-8}
+if [[ $# -eq 0 ]] ; then
+    echo '[path] [[CV_FACTOR]] [[SAMPLE_SIZE]]'
+    exit 1
+fi
+
+PATH=$1
+
+CV_FACTOR=${2:-0.08}
+SAMPLE_SIZE=${3:-8}
 CV_SAMPLE_SIZE=$((SAMPLE_SIZE/2))
+
+mkdir -p $PATH
+cd $PATH
 
 rm test -rf
 rm train -rf

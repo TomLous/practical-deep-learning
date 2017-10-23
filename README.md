@@ -85,7 +85,7 @@
 	* Make a link to notebooks `ln -s ~/[repoName]/deeplearning1/nbs/ nbs/deeplearning1`
 	* Run jupyter in background `jupyter notebook &> /dev/null &`
 	* Make data dir `mkdir ~/nbs/data` and change to it `cd ~/nbs/data`
-	* Download dogs&cats `wget http://www.platform.ai/data/dogscats.zip`
+	* Download dogs&cats `wget http://files.fast.ai/data/dogscats.zip`
 	* Install unzip `sudo apt-get install unzip`
 	* Unzip the data `unzip -q dogscats.zip`
 	* Go to your notebook <http://[instanceUrl]:8888/notebooks/deeplearning1/lesson1.ipynb>
